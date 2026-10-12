@@ -41,7 +41,7 @@
     "cross-env": "^7.0.3",
     "vite": "^6.0.0"
   },
-  "name": "react-observable-context-app",
+  "name": "roc-universal-app",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development npm run clean-build && node dist/server/server.js",
