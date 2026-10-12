@@ -1,0 +1,57 @@
+{
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@webkrafters/clone-total": "^1.0.1",
+    "@webkrafters/data-distillery": "^0.1.1",
+    "@webkrafters/get-property": "^2.0.0",
+    "@webkrafters/path-dotize": "0.0.2",
+    "@webkrafters/react-observable-context": "^7.0.9",
+    "@webkrafters/timed-map": "^2.0.0",
+    "express": "^4.21.2",
+    "history": "^5.3.0",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.clonedeepwith": "^4.5.0",
+    "lodash.isboolean": "^3.0.3",
+    "lodash.isempty": "^4.4.0",
+    "lodash.isequal": "^4.5.0",
+    "lodash.isinteger": "^4.0.4",
+    "lodash.isobject": "^3.0.2",
+    "lodash.isplainobject": "^4.0.6",
+    "lodash.omit": "^4.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-eagleeye": "^1.0.6",
+    "react-router-dom": "^6.28.0",
+    "react-xarrows": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "vite": "^6.0.0"
+  },
+  "name": "react-observable-context-app",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development npm run clean-build && node dist/server/server.js",
+    "qdev": "npm un -S @webkrafters/react-eagleeye && npm i -S ../react-observable-context/webkrafters-react-observable-context-7.0.8.tgz && npm run dev",
+    "build:client": "vite build",
+    "build:server": "cross-env VITE_SSR_BUILD=true vite build",
+    "build": "npm run build:client && npm run build:server",
+    "clean-build": "rm -rf dist && rm -rf node_modules/.vite && npm run build",
+    "start": "cross-env NODE_ENV=production node dist/server/server.js"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}
