@@ -1,2 +1,2 @@
-# react-observable-context-app
-A unified demo applications for the React Observable Context package (npm: @webkrafters/react-observable-context).
+# react-observable-context-app - universal
+A unified demo application for a React Observable Context state managed universal SPA. (npm: @webkrafters/react-observable-context).
